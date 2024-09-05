@@ -1,0 +1,301 @@
+/* general style */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+  }
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+  
+ol, ul {
+    list-style: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2, h3, h4 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;    
+}
+
+
+/* desktop view */
+body {
+    display: grid;
+    background-color: hsl(148, 38%, 91%);
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.success--notice {
+    background-color: hsl(187, 24%, 22%);
+    padding: 8px;
+    border-radius: 5px;
+    position: relative;
+    top: 2px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+#success--icon {
+    max-width: 10px;
+}
+
+.success--notice--wrapper {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.hide--successnotice {
+    display: none;
+    margin-top: 5px;
+}
+
+.success--txt {
+    color: hsl(100, 100%, 100%);
+}
+
+.confirmation {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(100, 100%, 100%);
+    border-radius: 10px;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 5px 5px 5px;
+    gap: 5px;
+    z-index: -1;
+}
+
+.query__radio--info {
+    margin: 4px;
+    max-width: 10px;
+}
+
+#submit__btn {
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(100, 100%, 100%);
+    padding: 5px 0;
+    border-radius: 5px;
+    font-size: 10px;
+    border: solid hsl(169, 82%, 27%);
+}
+
+.form--section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    font-size: 10px;
+    row-gap: 5px;
+}
+
+.firstname:hover,
+.secondname:hover,
+.query__option:hover,
+.mail--field:hover,
+.message--field:hover {
+    cursor: pointer;
+    border-radius: 3px;
+    border: thin solid hsl(169, 82%, 27%);
+}
+
+.query--info:hover,
+#consent:hover {
+    cursor: pointer; 
+}
+
+#submit__btn:hover {
+    cursor: pointer;
+    background-color: hsl(169, 82%, 27%);
+    border-color: hsl(169, 82%, 27%);
+}
+
+#mail--title, .mail--field, #query--title, .message--field, #query--error, #message--fielderror, #consent--error {
+    grid-column: 1/ span 2;
+}
+
+#lname--error {
+    grid-column: 2/ span 1;
+}
+
+#consent--info {
+    text-wrap: wrap;
+}
+
+.hide--error {
+    display: none;
+}
+
+.error--color {
+    color: hsl(0, 66%, 54%);
+}
+
+.form--section, #submit__btn, #mail--title, #query--title, #message--title, #consent--info {
+    margin-top: 5px;
+}
+
+.error--border {
+    border: thin solid hsl(0, 66%, 54%);
+    border-radius: 3px;
+    font-size: 10px;
+    padding: 5px 10px;
+}
+
+.query__option {
+    border: thin solid hsl(100, 0%, 0%);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+#consent--info {
+    display: flex;
+    align-items: center;
+}
+
+.message--fieldsize {
+    resize: none;
+}
+
+.firstname:focus,
+.secondname:focus,
+.mail--field:focus,
+.message--field:focus {
+    border: thin solid hsl(169, 82%, 27%);
+    outline: none;
+    border-radius: 3px;
+}
+
+.noerror--border {
+    font-size: 10px;
+    padding: 5px 10px;
+    border: thin solid;
+    border-radius: 3px;
+}
+
+
+
+
+/* mobile view */
+@media only screen and (max-width: 375px) {
+    .form--section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    } 
+
+    .query__option {
+        display: flex;
+        /* align-items: center; */
+        flex-basis: 25px;
+    }
+
+    .container {
+        gap: 15px;
+        margin: 0;
+        padding: 15px;
+    }
+
+    #fname--title {
+        order: 1;
+    }
+
+    #fname {
+        order: 2;
+    }
+
+    #fname--error {
+        order: 3;
+    }
+
+    
+    #lname--title {
+        order: 4;
+    }
+
+    #lname {
+        order: 5;
+    }
+
+    #lname--error {
+        order: 6;
+    }
+
+    #mail--title {
+        order: 7;
+    }
+
+    #mail {
+        order: 8;
+    }
+
+    #mail--error {
+        order: 9;
+    }
+
+    #query--title {
+        order: 10;
+    }
+
+    .general--enquiry {
+        order: 11;
+    }
+
+    .support--request {
+        order: 12;
+    }
+
+    #query--error {
+        order: 13;
+    }
+
+    #message--title {
+        order: 14;
+    }
+
+    #message {
+        order: 15;
+    }
+
+    #message--fielderror {
+        order: 16;
+    }
+
+    #consent--info {
+        order: 17;
+    }
+
+    #consent--error {
+        order: 18;
+    }
+
+    #fname--title, #lname--title, #mail--title, #query--title, #message--title, #consent--info {
+    margin-top: 10px;
+    }
+
+
+}

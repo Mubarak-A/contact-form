@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <!-- css style -->
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+<body>
+
+    <section class="wrapper">
+        <div class="success--notice--wrapper hide--successnotice">
+            <div class="success--notice">
+                <figure class="confirmation">
+                    <img src="assets/images/icon-success-check.svg" id="success--icon" alt="">
+                    <h5 class="success--txt">Message Sent!</h5>
+                </figure>
+                <h5 class="success--txt">Thanks for completing the form. We'll be in touch soon!</h5>
+            </div>
+        </div>
+        
+
+        <div class="container">
+
+            <section class="header--wrapper">
+                <h3 class="header--txt">Contact Us</h3>
+            </section>
+    
+            <form action="" class="form--section">
+    
+                <!-- Name title row -->
+                <label for="fname" id="fname--title">First Name *</label>
+                <label for="lname" id="lname--title">Last Name *</label>
+    
+                <!-- Name field row -->
+                <input type="text" id="fname" class="firstname noerror--border" name="FirstName" tabindex="0" required>
+                <input type="text" id="lname" class="secondname noerror--border" name="SecondName" tabindex="0" required>
+                
+                <h5 id="fname--error" class="hide--error error--color">This field is required</h5>
+                <h5 id="lname--error" class="hide--error error--color">This field is required</h5>
+    
+    
+                <!-- Email row -->
+                <label for="mail" id="mail--title">Email Address *</label>
+    
+                <!-- Email field row -->
+                <input type="email" id="mail" class="mail--field noerror--border" name="Email Address" tabindex="0" required>
+                <h5 id="mail--error" class="hide--error error--color">Please enter a valid email address</h5>
+    
+                <!-- Radio title row -->
+                <p id="query--title">Query type *</p>
+    
+                <!-- Radio options row -->
+                <label for="enquiry" class="query__option general--enquiry" id="enquiry--container" tabindex="0">
+                    <input type="radio" id="enquiry" name="Query" class="query__radio--info" tabindex="-1">
+                    <label for="enquiry" class="query--info">General Enquiry</label>
+                </label>
+                <label for="support" class="query__option support--request" id="request--container" tabindex="0">
+                    <input type="radio" id="support" name="Query" class="query__radio--info" tabindex="-1">
+                    <label for="support" class="query--info">Support Request</label>
+                </label>
+    
+                <h5 id="query--error" class="hide--error error--color">Please select a query type</h5>
+    
+                <!-- Message title row -->
+                <label for="message" id="message--title">Message *</label> 
+    
+                <!-- Message field row -->
+                <textarea name="" id="message" class="message--fieldsize message--field noerror--border" tabindex="0" required></textarea>
+                <h5 id="message--fielderror" class="hide--error error--color">This field is required</h5>
+    
+                <!-- Consent row -->
+                <div id="consent--info">
+                    <input type="checkbox" id="consent" name="consent" tabindex="0"> 
+                    <label for="consent">I hereby consent to being contacted by the team *</label>
+                </div>
+                <h5 id="consent--error" class="hide--error error--color">To submit this form, please consent to being contacted</h5>
+    
+            </form> 
+    
+            <!-- Submit btn row -->
+            <button id="submit__btn" tabindex="0">Submit</button>
+    
+        </div>
+    </section>
+    
+
+    <script src="contact.js"></script>
+
+</body>
+</html>
